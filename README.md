@@ -55,18 +55,7 @@ Those are the prerequisit is an example of how to install need to use the softwa
 8. Run trellocli if you see the output below it means you have successfully installed the cli.
    ```sh
    trellocli
-Usage: trellocli [OPTIONS] COMMAND [ARGS]...
-
   Welcome to trellocli !!!
-
-Options:
-  --version   Show the version and exit.
-  -h, --help  Show this message and exit.
-
-Commands:
-  config
-  create-board
-  create-card
    ```
 
 
