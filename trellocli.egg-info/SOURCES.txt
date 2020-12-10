@@ -1,0 +1,11 @@
+README.md
+setup.py
+trellocli/__init__.py
+trellocli/api.py
+trellocli/cli.py
+trellocli.egg-info/PKG-INFO
+trellocli.egg-info/SOURCES.txt
+trellocli.egg-info/dependency_links.txt
+trellocli.egg-info/entry_points.txt
+trellocli.egg-info/requires.txt
+trellocli.egg-info/top_level.txt
