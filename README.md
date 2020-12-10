@@ -22,10 +22,10 @@ This is an example of how you may use the tool locally.
 
 ### Prerequisites
 
-Those are the prerequisit is an example of how to install need to use the software and how to install them.
 * python3
 * pip
 * virtualenv
+  
    ```sh
    pip install virtualenv
    ```
@@ -63,19 +63,19 @@ Those are the prerequisit is an example of how to install need to use the softwa
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. trellocli -h
+1. #### trellocli -h
    will show the help menu
 
-2. trellocli -v
+2. #### trellocli -v
    will print out the version
 
-3. trellocli config
+3. #### trellocli config
    Mandatory command to configure your API_KEY and SERVER_TOKEN, It will store the information as yaml file with the same directory.
 
-4. trellocli create-board -n myboard
+4. #### trellocli create-board -n myboard
    will create a Trello Board with the name myboard
 
-5. trellocli create-card --board myboard --list Doing --title mycard
+5. #### trellocli create-card --board myboard --list Doing --title mycard
    Will create a card in specific board and specific list with given title.
    -- comment : Optional argument if you want to add comment to the card.
    -- label : Optional argument , if you want to label the card.
