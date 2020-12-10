@@ -4,8 +4,7 @@ import click
 TRELLO_API_URL = 'https://api.trello.com/1/'
 ANSI_RED = '\033[31m'
 
-# [a-z][0-9]{32}
-# [a-z][0-9]{64}
+
 
 def _parse_ctx(ctx):
     """
