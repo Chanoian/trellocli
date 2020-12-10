@@ -1,9 +1,0 @@
-README.md
-clickdemo.py
-setup.py
-clickdemo.egg-info/PKG-INFO
-clickdemo.egg-info/SOURCES.txt
-clickdemo.egg-info/dependency_links.txt
-clickdemo.egg-info/entry_points.txt
-clickdemo.egg-info/requires.txt
-clickdemo.egg-info/top_level.txt
