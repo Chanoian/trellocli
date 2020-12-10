@@ -38,7 +38,7 @@ def _get_board_id(board, api_key, server_token):
     for brd in data:
         if brd['name'] == board:
             return brd['shortLink']
-    return click.echo(ANSI_RED + 'The Board {} Might Not Exist'.format(board))
+    raise click.exceptions.UsageError(ANSI_RED + 'The Board {} Might Not Exist'.format(board))
 
 
 def _get_list_id_within_board(board_id, list, api_key, server_token):
@@ -49,7 +49,7 @@ def _get_list_id_within_board(board_id, list, api_key, server_token):
     for lst in data:
         if lst['name'] == list:
             return lst['id']
-    return click.echo(ANSI_RED + 'The List {} Might Not Exist'.format(list))
+    raise click.exceptions.UsageError(ANSI_RED + 'The List {} Might Not Exist'.format(list))
 
 
 def _create_card(list_id, title, label, comment, api_key, server_token):
@@ -59,7 +59,7 @@ def _create_card(list_id, title, label, comment, api_key, server_token):
         response = requests.post(url, params=querystring)
         response.raise_for_status()
     except requests.exceptions.RequestException:
-        return click.echo(ANSI_RED + 'Something Went Wrong !!')
+        raise click.exceptions.UsageError(ANSI_RED + 'Something Went Wrong !!')
     click.echo('The Card Created Successfully !!!')
     return response.json()['id']
 
@@ -71,7 +71,7 @@ def _add_comment_to_card(card_id, comment, api_key, server_token):
         response = requests.post(url, params=querystring)
         response.raise_for_status()
     except requests.exceptions.RequestException:
-        return click.echo(ANSI_RED + 'Adding the commend failed !!')
+        raise click.exceptions.UsageError(ANSI_RED + 'Adding the commend failed !!')
     return click.echo('The Comment Added Successfully !!!')
 
 
@@ -82,7 +82,7 @@ def _add_label_to_card(card_id, label, api_key, server_token):
         response = requests.post(url, params=querystring)
         response.raise_for_status()
     except requests.exceptions.RequestException:
-        return click.echo(ANSI_RED + 'Adding The label failed !!')
+        raise click.exceptions.UsageError(ANSI_RED + 'Adding The label failed !!')
     click.echo('The Label Added Successfully !!!')
 
 
@@ -94,7 +94,7 @@ def api_create_board(ctx, name):
         response = requests.post(url, params=querystring)
         response.raise_for_status()
     except requests.exceptions.RequestException:
-        return click.echo(ANSI_RED + 'Something Went Wrong !!')
+        raise click.exceptions.UsageError(ANSI_RED + 'Something Went Wrong !!')
     return click.echo('The Board {} Created Successfully !!!'.format(name))
 
 

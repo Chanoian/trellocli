@@ -55,7 +55,7 @@ Those are the prerequisit is an example of how to install need to use the softwa
 8. Run trellocli if you see the output below it means you have successfully installed the cli.
    ```sh
    trellocli
-  Welcome to trellocli !!!
+   Welcome to trellocli !!!
    ```
 
 
@@ -63,14 +63,28 @@ Those are the prerequisit is an example of how to install need to use the softwa
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. trellocli -h
+   will show the help menu
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+2. trellocli -v
+   will print out the version
+
+3. trellocli config
+   Mandatory command to configure your API_KEY and SERVER_TOKEN, It will store the information as yaml file with the same directory.
+
+4. trellocli create-board -n myboard
+   will create a Trello Board with the name myboard
+
+5. trellocli create-card --board myboard --list Doing --title mycard
+   Will create a card in specific board and specific list with given title.
+   -- comment : Optional argument if you want to add comment to the card.
+   -- label : Optional argument , if you want to label the card.
 
 
 
 <!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+## Roadmap - TODO List
+1. need to move the .trello.cfg file from the source code directory to the user directory ~/.trello.cfg since it's more secure if the configuration files exists within the user directory.
+2. need to add more functionalities to the cli like remove card , remove board .. etc
+3. need to add unit testing to this project 
 
