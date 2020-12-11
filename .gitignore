@@ -24,5 +24,11 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# virtualenv
+.venv
+venv/
+ENV/
+
+
 # Config
 .trello.cfg
