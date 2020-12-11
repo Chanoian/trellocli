@@ -28,9 +28,11 @@ def trellocli(ctx):
 @click.pass_context
 def config(ctx):
     api_key = click.prompt("Please enter your API key")
+    # Make sure that the api_key has 32 digits
     if not re.match("[\da-z]{32}", api_key):
         raise click.BadOptionUsage(api_key, message='API Key Should be with length 32 numerical digit')
     server_token = click.prompt("Please enter your Server Token")
+    # Make sure that the server_token has 64 digits
     if not re.match("[\da-z]{64}", server_token):
         raise click.BadOptionUsage(server_token, message='Server Token Should be with length 64 numerical digit')
     with open(CONFIG_FILE, 'w+') as cfg:

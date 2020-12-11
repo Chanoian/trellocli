@@ -66,7 +66,7 @@ This is an example of how you may use the tool locally.
 1. #### trellocli -h
    will show the help menu
 
-2. #### trellocli -v
+2. #### trellocli --version
    will print out the version
 
 3. #### trellocli config
@@ -86,5 +86,6 @@ This is an example of how you may use the tool locally.
 ## Roadmap - TODO List
 1. need to move the .trello.cfg file from the source code directory to the user directory ~/.trello.cfg since it's more secure if the configuration files exists within the user directory.
 2. need to add more functionalities to the cli like remove card , remove board .. etc
-3. need to add unit testing to this project 
+3. enhance the exception handling to make it more clear to the user when an error occur.
+4. need to add unit testing to this project 
 
